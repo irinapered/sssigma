@@ -8,6 +8,7 @@ body {
     align-items: top;
     justify-content: center;
     min-height: 100vh;
+
 }
 
 .navigation {
@@ -33,7 +34,7 @@ body {
 .command-title,
 .command-action {
     display: inline-block;
-    width: 100vw;
+    width: 100%;
     margin-right: -100%;
     vertical-align: bottom;
 }
@@ -75,14 +76,14 @@ h1 {
 .command-block:nth-last-child(2) {
     padding: 5px;
     background-color: white;
-    width: 100vw;
+    width: 100%;
     cursor: default;
 }
 .command-block:last-child,
 .command-image {
     padding: 0;
     background-color: white;
-    width: 100vw;
+    width: 100%;
     margin-bottom: 3px;
     cursor: default;
 }
@@ -101,7 +102,7 @@ h1 {
 .command,
 .command-description {
     display: inline-block;
-    width: 100vw;
+    width: 100%;
     margin-right: -100%;
     vertical-align: bottom;
 }
