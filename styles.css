@@ -8,78 +8,97 @@ body {
     align-items: top;
     justify-content: center;
     min-height: 100vh;
-  }
-  
-  header {
-    background-color: transparent;
-  }
-  
-  .navigation {
-    width: 500px;
+}
+
+.navigation {
     background-color: white;
-    padding: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-  }
-  
-  .commands {
-      width: 450px;
-      background-color: white;
-      padding: 10px;
-      font-size: 10px;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-      margin-top: 50px;
-      margin-left: 25px;
-    }
-  
-  .command-title,
-  .command-action {
-      display: inline-block;
-      width: 100%;
-      margin-right: -100%;
-      vertical-align: bottom;
-    }
-    
-  .command-action {
-      color: #C5C4C6;
-      text-align: right;
-    }
-  
-  h1 {
+}
+
+.commands {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+
+.commands {
+    margin-top: 50px;
+    font-size: 10px;
+}
+
+.command-title,
+.command-action {
+    display: inline-block;
+    width: 100%;
+    margin-right: -100%;
+    vertical-align: bottom;
+}
+
+.command-action {
+    color: gray;
+    text-align: right;
+}
+
+h1 {
     margin: 0;
     color: rgb(0, 0, 0);
-  }
+}
 
-  .commands {
-    position: relative;
-  }
-  
-  
-  .command-details {
-    position: absolute;
-    right: -500px; /* Начальная позиция за пределами экрана справа */
-    width: 475px; /* Ширина меню */
-    height: 100vh; /* Высота меню на всю высоту экрана */
-    background-color: #F2F1F6;
-    transition: right 0.5s ease-in-out; /* Анимация выезда меню */
-  }
 
-  .show-menu {
-    right: 0; /* Показываем меню, сдвигая его внутрь экрана */
-  }
-  
-  .command-block {
-      padding: 10px;
-      font-size: 20px;
-      background-color: white;
-      margin-top: 5px;
-      border-radius: 10px;
-  }
-  .command-block:first-child {
-      margin-top: 10px; /* Отступ между основным блоком и блоком с первой командой */
-  }
-  .command-block:last-child {
-      background-color: #F2F1F6;
-      width: 450;
-  }
+.fas.fa-chevron-down {
+    transition: transform 0.4s ease;;
+}
+
+
+
+.command-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+.command-block {
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgba(128, 128, 128, 0.25);
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.command-block:first-child {
+    margin-top: 10px; /* Отступ между основным блоком и блоком с первой командой */
+}
+.command-block:nth-last-child(2) {
+    padding: 5px;
+    background-color: white;
+    max-width: 380px;
+}
+.command-block:last-child,
+.command-image {
+    padding: 0;
+    background-color: white;
+    max-width: 390px;
+    margin-bottom: 3px;
+}
+
+
+.command,
+.command-description {
+    display: inline-block;
+    width: 100%;
+    margin-right: -100%;
+    vertical-align: bottom;
+}
+
+.command-description {
+    color: gray;
+    font-style: italic;
+    text-align: right;
+}
+
+/* Отвечает за открытие и закрытие блока с командами */
+.expanded {
+    max-height: 610px;
+}
