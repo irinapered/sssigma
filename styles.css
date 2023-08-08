@@ -66,6 +66,8 @@ h1 {
     background-color: rgba(128, 128, 128, 0.25);
     margin-top: 5px;
     border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.1s;
 }
 .command-block:first-child {
     margin-top: 10px; /* Отступ между основным блоком и блоком с первой командой */
@@ -74,6 +76,7 @@ h1 {
     padding: 5px;
     background-color: white;
     max-width: 380px;
+    cursor: default;
 }
 .command-block:last-child,
 .command-image {
@@ -81,6 +84,17 @@ h1 {
     background-color: white;
     max-width: 390px;
     margin-bottom: 3px;
+    cursor: default;
+}
+
+.command-block:hover {
+    background-color: #464646; /* Цвет при наведении */
+    color: white; /* Изменение цвета текста при наведении */
+}
+.command-block:last-child:hover,
+.command-block:nth-last-child(2):hover {
+    background-color: white; /* Цвет при наведении */
+    color: black; /* Изменение цвета текста при наведении */
 }
 
 
@@ -100,5 +114,5 @@ h1 {
 
 /* Отвечает за открытие и закрытие блока с командами */
 .expanded {
-    max-height: 650px;
+    max-height: 610px;
 }
