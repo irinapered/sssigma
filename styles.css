@@ -61,7 +61,7 @@ h1 {
     overflow: hidden;
     transition: max-height 0.5s ease;
 }
-.command-block {
+.command-block-url {
     padding: 10px;
     font-size: 20px;
     background-color: rgba(128, 128, 128, 0.25);
@@ -70,10 +70,16 @@ h1 {
     cursor: pointer;
     transition: background-color 0.1s;
 }
-.command-block:first-child {
+.command-block {
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    margin-top: 5px;
+}
+.command-block-url:first-child {
     margin-top: 10px; /* Отступ между основным блоком и блоком с первой командой */
 }
-.command-block:nth-last-child(2) {
+.command-block:first-child {
     padding: 5px;
     background-color: white;
     width: 100%;
@@ -88,15 +94,11 @@ h1 {
     cursor: default;
 }
 
-.command-block:hover {
+.command-block-url:hover {
     background-color: #464646; /* Цвет при наведении */
     color: white; /* Изменение цвета текста при наведении */
 }
-.command-block:last-child:hover,
-.command-block:nth-last-child(2):hover {
-    background-color: white; /* Цвет при наведении */
-    color: black; /* Изменение цвета текста при наведении */
-}
+
 
 
 .command,
