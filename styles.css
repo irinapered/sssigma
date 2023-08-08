@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
-    background-color: white;
+    background-color: #F2F1F6;
     display: flex;
     align-items: top;
     justify-content: center;
@@ -17,14 +17,13 @@ body {
   .navigation {
     background-color: white;
     padding: 10px 10px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
   }
   
   .commands {
-      background-color: #EFEFEF;
+      background-color: white;
       padding: 10px 20px;
       border-radius: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -69,7 +68,7 @@ body {
   .command-block {
       padding: 10px;
       font-size: 20px;
-      background-color: #CDCECE;
+      background-color: rgba(128, 128, 128, 0.25);
       margin-top: 5px;
       border-radius: 10px;
   }
@@ -77,8 +76,7 @@ body {
       margin-top: 10px; /* Отступ между основным блоком и блоком с первой командой */
   }
   .command-block:last-child {
-      
-      background-color: #EFEFEF;
+      background-color: white;
       max-width: 380px;
   }
   .expanded {
