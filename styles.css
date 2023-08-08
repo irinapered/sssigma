@@ -1,86 +1,86 @@
 /* Ваш CSS стиль */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
-  background-image: linear-gradient(to left bottom, #ff4800, #fff712);
-  display: flex;
-  align-items: top;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-header {
-  background-color: transparent;
-}
-
-.navigation {
-  background-color: #EFEFEF;
-  padding: 10px 10px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-.commands {
-    background-color: #EFEFEF;
-    padding: 10px 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    margin-top: 10px;
-  }
-
-.commands {
-  margin-top: 50px;
-  font-size: 10px;
-}
-
-.command-title,
-.command-action {
-    display: inline-block;
-    width: 100%;
-    margin-right: -100%;
-    vertical-align: bottom;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    background-color: white;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    min-height: 100vh;
   }
   
-.command-action {
-    color: gray;
-    text-align: right;
+  header {
+    background-color: transparent;
   }
-
-h1 {
-  margin: 0;
-  color: rgb(0, 0, 0);
-}
-
-
-.fas.fa-chevron-down {
-    transition: transform 0.4s ease;;
-}
-
-
-
-.command-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-}
-.command-block {
-    padding: 10px;
-    font-size: 20px;
-    background-color: rgba(128, 128, 128, 0.5);
-    margin-top: 5px;
-    border-radius: 10px;
-}
-.command-block:first-child {
-    margin-top: 10px; /* Отступ между основным блоком и блоком с первой командой */
-}
-.command-block:last-child {
+  
+  .navigation {
+    background-color: white;
+    padding: 10px 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .commands {
+      background-color: #EFEFEF;
+      padding: 10px 20px;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      margin-top: 10px;
+    }
+  
+  .commands {
+    margin-top: 50px;
+    font-size: 10px;
+  }
+  
+  .command-title,
+  .command-action {
+      display: inline-block;
+      width: 100%;
+      margin-right: -100%;
+      vertical-align: bottom;
+    }
     
-    background-color: #EFEFEF;
-    max-width: 380px;
-}
-.expanded {
-    max-height: 500px;
-}
+  .command-action {
+      color: gray;
+      text-align: right;
+    }
+  
+  h1 {
+    margin: 0;
+    color: rgb(0, 0, 0);
+  }
+  
+  
+  .fas.fa-chevron-down {
+      transition: transform 0.4s ease;;
+  }
+  
+  
+  
+  .command-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+  }
+  .command-block {
+      padding: 10px;
+      font-size: 20px;
+      background-color: #CDCECE;
+      margin-top: 5px;
+      border-radius: 10px;
+  }
+  .command-block:first-child {
+      margin-top: 10px; /* Отступ между основным блоком и блоком с первой командой */
+  }
+  .command-block:last-child {
+      
+      background-color: #EFEFEF;
+      max-width: 380px;
+  }
+  .expanded {
+      max-height: 500px;
+  }
