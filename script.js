@@ -4,7 +4,7 @@ $(document).ready(function() {
         var shevronIcon = $("#chevron-icon");
         var commandList = $(".command-list");
 
-        if ($(event.target).closest('.command-block').length === 0) {
+        if ($(event.target).closest('.command-block-url').length === 0) {
             $(".command-list").toggleClass("expanded");
         }
         
@@ -21,7 +21,7 @@ $(document).ready(function() {
         }
     });
 
-    $(".command-block").click(function() {
+    $(".command-block-url").click(function() {
         var link = $(this).data("link");
         window.location.href = link;
     });
