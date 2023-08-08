@@ -33,7 +33,7 @@ body {
 .command-title,
 .command-action {
     display: inline-block;
-    width: 100%;
+    width: 100vw;
     margin-right: -100%;
     vertical-align: bottom;
 }
@@ -101,7 +101,7 @@ h1 {
 .command,
 .command-description {
     display: inline-block;
-    width: 100%;
+    width: 100vw;
     margin-right: -100%;
     vertical-align: bottom;
 }
