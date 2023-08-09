@@ -185,7 +185,8 @@
     /* Изменение цвета "показать" или "скрыть" при активации на телефонах */
     .command-title:active,
     .command-action:active {
-        color: black;
+        color: red;
+        transition: color 0.2s;
     }
 
     .command-action {
