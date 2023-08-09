@@ -178,12 +178,6 @@
     }
 
     /* Изменение цвета "показать" или "скрыть" при наведении для десктопа */
-    @media (hover: hover) {
-        .command-title:hover,
-        .command-action:hover {
-        color: white;
-        }
-    }
     /* Изменение цвета "показать" или "скрыть" при активации на телефонах */
     .command-title:active,
     .command-action:active {
