@@ -13,13 +13,14 @@ body {
 }
 
 .icon {
-    width: 10%;
+    width: 7%;
+    vertical-align: middle;
+    margin-right: 0.5em;
 }
 
 .navigation {
     background-color: white;
     width: 84%;
-    padding: 5px;
     border-radius: 15px;
     font-size: 19px;
     margin-top: 50px;
@@ -30,16 +31,40 @@ body {
 
 .navigation-block {
     padding: 10px;
+    position: relative;
 }
+
+/* .navigation-block:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    /* left: 10%; */
+    /* bottom: 99.5%;
+    height: 1%;
+    width: 50%;
+    background-color: black; */
+/* } */
 
 .title,
 .chevron-right {
     display: inline-block;
     width: 100%;
     margin-right: -100%;
-    vertical-align: bottom;
     cursor: pointer;
+    vertical-align: middle;
 }
+
+.title::before {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.title {
+    display: inline-flex;
+    align-items: center;
+}
+
 
 .chevron-right {
     color: gray;
