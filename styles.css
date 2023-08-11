@@ -13,14 +13,14 @@ body {
 }
 
 .icon {
-    width: 8%;
+    width: 8.5%;
     vertical-align: middle;
     margin-right: 0.5em;
 }
 
 .navigation {
     background-color: white;
-    width: 85%;
+    width: 83%;
     border-radius: 15px;
     font-size: 19px;
     margin-top: 50px;
@@ -30,7 +30,7 @@ body {
 .navigation {margin-top: 50px;}
 
 .navigation-block {
-    padding: 11px;
+    padding: 10.5px;
     position: relative;
 }
 
@@ -43,7 +43,7 @@ body {
     position:absolute;
     top: -1px;
     right:0;
-    width:90%;
+    width:100%;
     border-top:1px solid #c6c6c8;
     content:"";
 }
