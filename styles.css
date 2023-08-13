@@ -60,8 +60,7 @@ body {
     background-color: white;
     height: calc(90.654vw / 8);
     position: relative;
-    transition: background-color 1s;
-    transition: background-color 1s, border-radius 1s, transform 1s;
+    transition: background-color 1s, border-radius 1s, transform 1s, box-shadow 1s;
 }
 /* Расстояние между блоками */
 .navigation-block:not(:first-child) {
@@ -69,19 +68,13 @@ body {
 }
 
 .navigation-block:hover {
-
+    background-color: #F2F1F6;
     border-radius: calc(100vw / 1284 * 40);
-    transform: scale(1.1);
+    transform: scale(1.04);
     cursor: pointer;
     z-index: 1;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
 }
-
-.hovered,
-.navigation-block:hover ~ .navigation-block {
-    background-color: #E7E6EC;
-    cursor: pointer;
-}
-
 
 
 
