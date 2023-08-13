@@ -59,7 +59,7 @@ body {
 .navigation-block {
     height: calc(90.654vw / 8);
     position: relative;
-    transition: background-color 0.2s;
+    /* transition: background-color 0.2s; */
 }
 /* .navigation-block:hover, */
 .navigation-block:hover {
