@@ -67,7 +67,7 @@ body {
     margin-top: calc(100vw / 1284 * 3);
 }
 
-.navigation-block:active {
+.navigation-block:focus {
     background-color: #F2F1F6;
     border-radius: calc(100vw / 1284 * 40);
     transform: scale(1.04);
