@@ -1,12 +1,10 @@
-function navigate() {
-    const block = document.querySelector('.block');
-    const container = document.querySelector('.container');
-  
-    block.style.animation = 'fade-out 0.5s forwards';
-    container.style.animation = 'shift-left 0.5s forwards';
-  
-    setTimeout(() => {
-      window.location.href = 'новая_страница.html';
-    }, 500);
-  }
-  
+$(document).ready(function() {
+    $(".navigation-block").hover(
+      function() {
+        $(this).prevAll(".navigation-block").addClass("hovered");
+      },
+      function() {
+        $(this).prevAll(".navigation-block").removeClass("hovered");
+      }
+    );
+  });
