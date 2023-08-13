@@ -25,9 +25,9 @@ body {
 }
 
 .navigation {
-    background-color: white;
+    background: linear-gradient(to left, #E7E6EC calc(90.654vw - (100vw / 1284 * 197)), white calc(90.654vw - (100vw / 1284 * 197)));
     width: 90.654vw;
-    height: calc(90.654vw / 8 * 4);
+    height: calc((90.654vw / 8 * 4) + (100vw / 1284 * 6));
     border-radius: calc(100vw / 1284 * 40);
     font-size: calc(100vw / 1284 * 50);
     margin: auto;
@@ -57,27 +57,33 @@ body {
 /* .sigmabot-news-channel {margin-top: calc(100vw / 1284 * 34);} */
 
 .navigation-block {
+    background-color: white;
     height: calc(90.654vw / 8);
     position: relative;
-    /* transition: background-color 0.2s; */
+    transition: background-color 1s;
+    transition: background-color 1s, border-radius 1s, transform 1s;
 }
-/* .navigation-block:hover, */
-.navigation-block:hover {
-    background-color: #E7E6EC;
-    /* transition: background-color 2s; */
-    cursor: pointer;
-    touch-action: pinch-zoom;
+/* Расстояние между блоками */
+.navigation-block:not(:first-child) {
+    margin-top: calc(100vw / 1284 * 3);
 }
 
-/* Разделение блоков */
-.navigation-block:not(:last-child)::before{
-    position: absolute;
-    top: calc(90.654vw / 8 - (100vw / 1284));
-    right:0;
-    width: calc(90.654vw - (100vw / 1284 * 197));
-    border-top: calc(100vw / 1284 * 3) solid #E7E6EC;
-    content:"";
+.navigation-block:hover {
+
+    border-radius: calc(100vw / 1284 * 40);
+    transform: scale(1.1);
+    cursor: pointer;
+    z-index: 1;
 }
+
+.hovered,
+.navigation-block:hover ~ .navigation-block {
+    background-color: #E7E6EC;
+    cursor: pointer;
+}
+
+
+
 
 .navigation-block:first-child {
     border-top-left-radius: calc(100vw / 1284 * 40);
