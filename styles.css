@@ -55,27 +55,27 @@ body {
 .navigation-block {
     height: calc(90.654vw / 8);
     position: relative;
+    transition: background-color 0.2s;
+}
+.navigation-block:hover,
+.navigation-block:active {
+    background-color: #E7E6EC;
+    cursor: pointer;
 }
 
 /* Разделение блоков */
-.navigation-block:not(:first-child)::before{
+.navigation-block:not(:last-child)::before{
     position: absolute;
-    top: -calc(100vw / 1284 * 3);
+    top: calc(90.654vw / 8 - (100vw / 1284));
     right:0;
     width: calc(90.654vw - (100vw / 1284 * 197));
     border-top: calc(100vw / 1284 * 2) solid #c6c6c8;
     content:"";
 }
 
-
-.title,
-.action {
-    display: inline-block;
-    cursor: pointer;
-}
-
 .title {
     position: absolute;
+
     top: 50%; /* Положение по вертикали в середине блока */
     left: calc(100vw / 1284 * 197);
     transform: translateY(-50%); /* Сдвиг вверх на половину высоты текста */
@@ -83,6 +83,7 @@ body {
 
 .action {
     position: absolute;
+
     top: 50%; /* Положение по вертикали в середине блока */
     /* left: calc(100vw / 1284 * 1077); */
     right: calc(100vw / 1284 * 63);
