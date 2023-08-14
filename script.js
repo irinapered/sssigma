@@ -8,7 +8,7 @@ function setWebsiteBackgroundColor(colorScheme) {
     if (colorScheme === 'dark') {
         body.style.backgroundColor = 'black';
     } else {
-        body.style.backgroundColor = 'white';
+        body.style.backgroundColor = '#F2F1F6';
     }
 }
 
