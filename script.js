@@ -1,10 +1,3 @@
-$(document).ready(function() {
-    $(".navigation-block").hover(
-      function() {
-        $(this).prevAll(".navigation-block").addClass("hovered");
-      },
-      function() {
-        $(this).prevAll(".navigation-block").removeClass("hovered");
-      }
-    );
-  });
+let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
+
+tg.expand(); //расширяем на все окно
