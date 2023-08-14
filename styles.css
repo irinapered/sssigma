@@ -58,29 +58,29 @@ body {
 }
 /* .sigmabot-news-channel {margin-top: calc(100vw / 1284 * 34);} */
 
-.navigation-bar {
+.navigationBar {
     background-color: white;
     height: calc(90.654vw / 8);
     position: relative;
     /* transition: background-color 1s, border-radius 1s, transform 1s, box-shadow 1s; */
 }
 /* Расстояние между блоками */
-.navigation-bar:not(:first-child) {
+.navigationBar:not(:first-child) {
     margin-top: calc(100vw / 1284 * 3);
 }
 
-.navigation-bar:hover {
+.navigationBar:hover {
     background-color: #E7E6EC;
 }
 
 
 
 
-.navigation-bar:first-child {
+.navigationBar:first-child {
     border-top-left-radius: calc(100vw / 1284 * 40);
     border-top-right-radius: calc(100vw / 1284 * 40);
 }
-.navigation-bar:last-child {
+.navigationBar:last-child {
     border-bottom-left-radius: calc(100vw / 1284 * 40);
     border-bottom-right-radius: calc(100vw / 1284 * 40);
 }
