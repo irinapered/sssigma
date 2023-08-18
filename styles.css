@@ -77,7 +77,7 @@
 /* .sigmabot-news-channel {margin-top: calc(100vw / 1284 * 34);} */
 
 .navigationBar {
-    background-color: white;
+    /* background-color: white; */
     height: calc(90.654vw / 8);
     position: relative;
     /* transition: background-color 1s, border-radius 1s, transform 1s, box-shadow 1s; */
