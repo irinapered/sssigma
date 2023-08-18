@@ -2,7 +2,7 @@ let tg = window.Telegram.WebApp; //получаем объект webapp теле
 
 tg.expand(); //расширяем на все окно
 
-function setWebsiteBackgroundColor(colorScheme) {
+function setWebsiteBackgroundColor(colorScheme, navigationBars) {
     const body = document.body;
 
     if (colorScheme === 'dark') {
@@ -12,13 +12,16 @@ function setWebsiteBackgroundColor(colorScheme) {
         });
     } else {
         body.style.backgroundColor = '#F2F1F6';
+
     }
 }
 
 function setThemeClass() {
     const colorScheme = Telegram.WebApp.colorScheme;
-    setWebsiteBackgroundColor(colorScheme);
+    const navigationBars = document.querySelectorAll('.navigationBar');
+    setWebsiteBackgroundColor(colorScheme, navigationBars);
 }
 
 Telegram.WebApp.onEvent('themeChanged', setThemeClass);
 setThemeClass();
+
