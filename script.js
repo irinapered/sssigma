@@ -8,7 +8,7 @@ function setWebsiteBackgroundColor(colorScheme, navigationBars) {
     if (colorScheme === 'dark') {
         body.style.backgroundColor = 'black';
         navigationBars.forEach(navigationBar => {
-            navigationBar.style.backgroundColor = 'black';
+            navigationBar.style.backgroundColor = '#1C1B1E';
         });
     } else {
         body.style.backgroundColor = '#F2F1F6';
