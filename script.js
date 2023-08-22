@@ -49,6 +49,7 @@ function openPage(pageURL) {
       document.body.removeChild(iframe);
       window.location.href = pageURL;
     }, 500);
+    tg.HapticFeedback.impactOccurred('rigid')
   }
   
   
