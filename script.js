@@ -1,7 +1,8 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
 tg.expand(); //расширяем на все окно
-tg.MainButton.show()
+
+tg.MainButton.show();
 tg.MainButton.setText("Закрыть навигацию");
 
 function setWebsiteBackgroundColor(colorScheme, navigationBars) {
@@ -47,7 +48,7 @@ function openPage(pageURL) {
     setTimeout(function () {
       document.body.removeChild(iframe);
       window.location.href = pageURL;
-    }, 500);
+    }, 450);
   }
   
   
