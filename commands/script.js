@@ -9,4 +9,5 @@ tg.MainButton.Text("JJJJJ");
 tg.BackButton.show()
 tg.HapticFeedback.impactOccurred('rigid')
 tg.HapticFeedback.impactOccurred(rigid)
-tg.setHeaderColor("red")
+Telegram.WebApp.HapticFeedback.impactOccurred('heavy')
+tg.setHeaderColor('secondary_bg_color')
