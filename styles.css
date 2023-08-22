@@ -1,38 +1,230 @@
-let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+@media (prefers-color-scheme: light) {body {background-color: #F2F1F6;}}
+@media (prefers-color-scheme: dark) {body {background-color: black;}}
 
-tg.expand(); //расширяем на все окно
+.title-image {
+    width: 100vw;
+}
 
-function setWebsiteBackgroundColor(colorScheme, navigationBars) {
-    const body = document.body;
+.icon {
+    width: calc(100vw / 1284 * 87);
+    margin-left: calc(100vw / 1284 * 60);
+    margin-right: calc(100vw / 1284 * 33);
+    margin-top: calc(100vw / 1284 * 28);
+}
 
-    if (colorScheme === 'dark') {
-        body.style.backgroundColor = 'black';
-        navigationBars.forEach(navigationBar => {
-            navigationBar.style.backgroundColor = '#1C1B1E';
-        });
-    } else {
-        body.style.backgroundColor = '#F2F1F6';
+.block-1 {
+    background: linear-gradient(to left, #E7E6EC calc(90.654vw - (100vw / 1284 * 197)), white calc(90.654vw - (100vw / 1284 * 197)));
+    width: 90.654vw;
+    height: calc((90.654vw / 8 * 4) + (100vw / 1284 * 6));
+    border-radius: calc(100vw / 1284 * 40);
+    font-size: calc(100vw / 1284 * 50);
+    margin: auto;
 
+}
+.block-2 {
+    background: linear-gradient(to left, #E7E6EC calc(90.654vw - (100vw / 1284 * 197)), white calc(90.654vw - (100vw / 1284 * 197)));
+    width: 90.654vw;
+    height: calc(90.654vw / 8 * 2);
+    border-radius: calc(100vw / 1284 * 40);
+    font-size: calc(100vw / 1284 * 50);
+    margin: auto;
+}
+.block-2 {
+    margin-top: calc(100vw / 1284 * 105);
+    margin-bottom: calc(100vw / 1284 * 105);
+}
+.block-3,
+.block-4 {
+    width: 90.654vw;
+    height: calc(90.654vw / 8);
+    border-radius: calc(100vw / 1284 * 40);
+    font-size: calc(100vw / 1284 * 50);
+    margin: auto;
+}
+
+@media (prefers-color-scheme: light) {
+    .block-1,
+    .block-2 {
+        background: linear-gradient(to left, #E7E6EC calc(90.654vw - (100vw / 1284 * 197)), white calc(90.654vw - (100vw / 1284 * 197)));
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .block-1,
+    .block-2 {
+        background: linear-gradient(to left, #3E3D40 calc(90.654vw - (100vw / 1284 * 197)), #1C1B1E calc(90.654vw - (100vw / 1284 * 197)));
     }
 }
 
-function setThemeClass() {
-    const colorScheme = Telegram.WebApp.colorScheme;
-    const navigationBars = document.querySelectorAll('.navigationBar');
-    setWebsiteBackgroundColor(colorScheme, navigationBars);
+
+
+
+
+/* БЛОКИ */
+
+.navigationBar {
+    height: calc(90.654vw / 8);
+    position: relative;
+}
+@media (prefers-color-scheme: light) {
+    .navigationBar {
+        background-color: white;
+        color: black;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .navigationBar {
+        background-color: #1C1B1E;
+        color: white;
+    }
 }
 
-Telegram.WebApp.onEvent('themeChanged', setThemeClass);
-setThemeClass();
+/* Расстояние между блоками */
+.navigationBar:not(:first-child) {
+    margin-top: calc(100vw / 1284 * 3);
+}
+
+/* Цвет блока при наведении */
+@media (prefers-color-scheme: light) {
+    .navigationBar:hover {
+        background-color: #E7E6EC;
+        cursor: pointer;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .navigationBar:hover {
+        background-color: #2C2B2D;
+        cursor: pointer;
+    }
+}
+
+/* Расширение блоков при наведении в цвет полос между блоками */
+.navigationBar::before,
+.navigationBar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(100vw / 1284 * 3);
+    transform: scaleY(0);
+}
+@media (prefers-color-scheme: light) {
+    .navigationBar::before,
+    .navigationBar::after {
+        background-color: #E7E6EC;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .navigationBar::before,
+    .navigationBar::after {
+        background-color: #2C2B2D;
+    }
+}
+.navigationBar::before {
+    top: calc(100vw / 1284 * -3);
+}
+.navigationBar::after {
+    bottom: calc(100vw / 1284 * -3);
+}
+.navigationBar:not(:first-child):hover::before,
+.navigationBar:not(:last-child):hover::after {
+    transform: scaleY(1); /* Само расширение при наведении */
+}
+
+
+
+.navigationBar:first-child {
+    border-top-left-radius: calc(100vw / 1284 * 40);
+    border-top-right-radius: calc(100vw / 1284 * 40);
+}
+.navigationBar:last-child {
+    border-bottom-left-radius: calc(100vw / 1284 * 40);
+    border-bottom-right-radius: calc(100vw / 1284 * 40);
+}
 
 
 
 
-function openPage(pageURL) {
-    const body = document.body;
-    body.style.transform = 'translateX(-200px)';
-    
-    setTimeout(() => {
-      window.location.href = pageURL;
-    }, 1000);
-  }
+.title {
+    position: absolute;
+    top: 50%; /* Положение по вертикали в середине блока */
+    left: calc(100vw / 1284 * 197);
+    transform: translateY(-50%); /* Сдвиг вверх на половину высоты текста */
+}
+
+.action {
+    position: absolute;
+    top: 50%; /* Положение по вертикали в середине блока */
+    right: calc(100vw / 1284 * 63);
+    transform: translateY(-50%); /* Сдвиг вверх на половину высоты текста */
+}
+
+@media (prefers-color-scheme: light) {
+    .action {
+        color: #C5C4C7;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .action {
+        color: #59595E;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .action-text {
+        color: #8A8A8D;
+        margin-right: calc(100vw / 1284 * 10);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .action-text {
+        color: #97989E;
+        margin-right: calc(100vw / 1284 * 10);
+    }
+}
+
+
+
+.block-name {
+    font-size: calc(100vw / 1284 * 45);
+    margin-left: calc(100vw / 1284 * 120);
+    margin-bottom: calc(100vw / 1284 * 25);
+    margin-right: calc(100vw / 1284 * 123);
+}
+.description-block {
+    font-size: calc(100vw / 1284 * 45);
+    margin-left: calc(100vw / 1284 * 120);
+    margin-bottom: calc(100vw / 1284 * 105);
+    margin-top: calc(100vw / 1284 * 15);
+    margin-right: calc(100vw / 1284 * 123);
+}
+.sigmabot {
+    font-size: calc(100vw / 1284 * 45);
+    text-align: center;
+    margin-bottom: calc(100vw / 1284 * 50);
+}
+@media (prefers-color-scheme: light) {
+    .block-name,
+    .description-block,
+    .sigmabot {
+        color: #85848B;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .block-name,
+    .description-block,
+    .sigmabot {
+        color: #8C8D92;
+    }
+}
+
+
