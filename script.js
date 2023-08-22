@@ -29,10 +29,31 @@ setThemeClass();
 
 
 function openPage(pageURL) {
-    const body = document.body;
-    body.style.transform = 'translateX(-200px)';
-    
-    setTimeout(() => {
-      window.location.href = pageURL;
-    }, 1000);
+    var iframe = document.createElement('iframe');
+    iframe.src = pageURL;
+    iframe.className = 'animatedPage';
+    document.body.appendChild(iframe);
+  
+    // Дожидаемся завершения загрузки содержимого iframe
+    iframe.onload = function () {
+      // По окончании анимации переходим на новую страницу
+      setTimeout(function () {
+        window.location.href = pageURL;
+      }, 1000); // Подождите нужное количество времени
+  
+      // Начинаем анимацию появления после загрузки
+      requestAnimationFrame(function () {
+        iframe.style.transform = 'translateX(0)';
+      });
+    };
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
