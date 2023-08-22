@@ -1,6 +1,9 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
 tg.expand(); //расширяем на все окно
+tg.MainButton.setText("Закрыть навигацию");
+tg.MainButton.Text("Закрыть навигацию");
+tg.MainButton.show()
 
 function setWebsiteBackgroundColor(colorScheme, navigationBars) {
     const body = document.body;
@@ -33,22 +36,20 @@ function openPage(pageURL) {
     iframe.src = pageURL;
     iframe.className = 'animatedPage';
     document.body.appendChild(iframe);
+
+
   
-    // Дожидаемся завершения загрузки содержимого iframe
-    iframe.onload = function () {
-      // По окончании анимации переходим на новую страницу
-      setTimeout(function () {
-        window.location.href = pageURL;
-      }, 1000); // Подождите нужное количество времени
+    // Используем setTimeout, чтобы установить новое состояние анимации через небольшую задержку
+    setTimeout(function () {
+      iframe.style.transform = 'translateX(0)';
+    }, 0);
   
-      // Начинаем анимацию появления после загрузки
-      requestAnimationFrame(function () {
-        iframe.style.transform = 'translateX(0)';
-      });
-    };
+    // По окончании анимации удаляем iframe и переходим на новую страницу
+    setTimeout(function () {
+      document.body.removeChild(iframe);
+      window.location.href = pageURL;
+    }, 500);
   }
-  
-  
   
   
   
