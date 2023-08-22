@@ -2,9 +2,10 @@ let tg = window.Telegram.WebApp; //получаем объект webapp теле
 
 tg.expand(); //расширяем на все окно
 
-tg.MainButton.show()
 tg.MainButton.setText("Назад");
+tg.MainButton.Text("Назад");
+tg.MainButton.show()
 
 tg.BackButton.show()
 tg.impactOccurred(rigid)
-tg.setHeaderColor("#CD5152")
+tg.setHeaderColor("red")
