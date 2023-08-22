@@ -3,7 +3,6 @@ let tg = window.Telegram.WebApp; //получаем объект webapp теле
 tg.expand(); //расширяем на все окно
 tg.MainButton.show()
 tg.MainButton.setText("Закрыть навигацию");
-tg.MainButton.Text("Закрыть навигацию");
 
 function setWebsiteBackgroundColor(colorScheme, navigationBars) {
     const body = document.body;
@@ -49,7 +48,6 @@ function openPage(pageURL) {
       document.body.removeChild(iframe);
       window.location.href = pageURL;
     }, 500);
-    tg.HapticFeedback.impactOccurred('rigid')
   }
   
   
