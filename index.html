@@ -11,116 +11,179 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-  <header>
-    <div><img src="Images/SIGMABOT_t.png" class="title-image"></div>
-    <div class="block-1">
-        
-        <div class="navigationBar"  onclick="openPage('commands/commands.html')">
-          <img src="Images/icon1.png" class="icon">
-          <span class="title">Список команд</span>
-          <span class="action">
+  
+  <div><img src="Images/Main/title.png" class="title-image"></div>
+  
+
+  <div class="page" id="page1">
+
+    <div class="block block-with-multiple-buttons">
+        <div class="button" onclick="animateTransition()">
+          <img src="Images/Main/icon1.png" class="icon">
+          <span class="button-text">Список команд</span>
+          <span class="button-action">
             <i class="fa fa-chevron-right"></i>
           </span>
         </div>
-
-        <div class="navigationBar">
-          <img src="Images/icon2.png" class="icon">
-          <span class="title">Список фильмов</span>
-          <span class="action">
+        <div class="button">
+          <img src="Images/Main/icon2.png" class="icon">
+          <span class="button-text">Список фильмов</span>
+          <span class="button-action">
             <i class="fa fa-chevron-right"></i>
           </span>
         </div>
-
-        <div class="navigationBar">
-          <img src="Images/icon3.png" class="icon">
-          <span class="title">Как пользоваться ботом</span>
-          <span class="action">
+        <div class="button">
+          <img src="Images/Main/icon3.png" class="icon">
+          <span class="button-text">Как пользоваться ботом</span>
+          <span class="button-action">
             <i class="fa fa-chevron-right"></i>
           </span>
         </div>
-
-        <div class="navigationBar">
-          <img src="Images/icon4.png" class="icon">
-          <span class="title">Подробнее о боте</span>
-          <span class="action">
+        <div class="button">
+          <img src="Images/Main/icon4.png" class="icon">
+          <span class="button-text">Подробнее о боте</span>
+          <span class="button-action">
             <i class="fa fa-chevron-right"></i>
           </span>
         </div>
-
     </div>
 
-
-
-
-    <div class="block-2">
-        
-      <div class="navigationBar">
-        <img src="Images/icon5.png" class="icon">
-        <span class="title">Поддержка</span>
-        <span class="action">
-          <span class="action-text">Перейти к оплате</span>
+    <div class="block block-with-multiple-buttons">
+      <div class="button">
+        <img src="Images/Main/icon5.png" class="icon">
+        <span class="button-text">Поддержка</span>
+        <span class="button-action">
+          <span class="button-action-text">Перейти к оплате</span>
           <i class="fa fa-chevron-right"></i>
         </span>
       </div>
-
-      <div class="navigationBar">
-        <img src="Images/icon6.png" class="icon">
-        <span class="title">Связаться</span>
-        <span class="action">
-          <span class="action-text">Написать</span>
+      <div class="button">
+        <img src="Images/Main/icon6.png" class="icon">
+        <span class="button-text">Связаться</span>
+        <span class="button-action">
+          <span class="button-action-text">Написать</span>
           <i class="fa fa-chevron-right"></i>
         </span>
       </div>
-
     </div>
 
-    <div class="block-name"><span>ЕСЛИ БОТА ЗАБЛОКИРУЮТ</span></div>
-
-    <div class="block-3">
-        
-      <div class="navigationBar">
-        <img src="Images/icon7.png" class="icon">
-        <span class="title">SIGMABOT | Новости</span>
-        <span class="action">
-          <span class="action-text">В канал</span>
-          <i class="fa fa-chevron-right"></i>
+    <div class="block">
+      <div class="text-before-block">
+        <span>ЕСЛИ БОТА ЗАБЛОКИРУЮТ</span>
+      </div>
+      <div>
+        <div class="button">
+          <img src="Images/Main/icon7.png" class="icon">
+          <span class="button-text">SIGMABOT | Новости</span>
+          <span class="button-action">
+            <span class="button-action-text">В канал</span>
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </div>
+      </div>
+      <div class="text-after-block">
+        <span>
+          Подпишитесь на канал, чтобы не потерять SIGMABOT в случае блокировки и первым узнавать о новых фильмах в боте.
         </span>
       </div>
-    
-    </div>
 
-    <div class="description-block">
-      <span>
-        Подпишитесь на канал, чтобы не потерять SIGMABOT в случае блокировки и первым узнавать о новых фильмах в боте.
-      </span>
-    </div>
-
-    <div class="block-name"><span>ЧТО ЕЩЕ ПОСМОТРЕТЬ</span></div>
-
-    <div class="block-4">
-        
-      <div class="navigationBar">
-        <img src="Images/icon8.png" class="icon">
-        <span class="title">Наши другие боты</span>
-        <span class="action">
-          <span class="action-text">Смотреть</span>
-          <i class="fa fa-chevron-right"></i>
+      <div class="text-before-block">
+        <span>ЧТО ЕЩЕ ПОСМОТРЕТЬ</span>
+      </div>
+      <div>
+        <div class="button">
+          <img src="Images/Main/icon8.png" class="icon">
+          <span class="button-text">Наши другие боты</span>
+          <span class="button-action">
+            <span class="button-action-text">Смотреть</span>
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </div>
+      </div>
+      <div class="text-after-block">
+        <span>
+          Посмотрите список наших других ботов с фильмами и сериалами.
         </span>
       </div>
-    
+      <div class="sigmabot">
+        <span>2023 SIGMABOT. 18+</span>
+      </div>
     </div>
 
-    <div class="description-block">
-      <span>
-        Посмотрите список наших других ботов с фильмами и сериалами.
-      </span>
+  </div>
+
+
+
+
+
+  <div class="page" id="page2">
+
+    <div class="hello-block block-with-multiple-buttons">
+      <div class="hello-block button">
+        <img src="Images/Commands/icon1.png" class="icon">
+        <span class="button-text"><b>/start</b></span>
+        <span class="button-action">
+            <span class="button-action-text">Запуск бота / в начало</span>
+            <i class="fa fa-chevron-right"></i>
+        </span>
+      </div>
+      <div class="hello-block button">
+        <img src="Images/Commands/icon2.png" class="icon">
+        <span class="button-text"><b>/sigma</b></span>
+        <span class="button-action">
+            <span class="button-action-text">Список фильмов</span>
+            <i class="fa fa-chevron-right"></i>
+        </span>
+      </div>
+      <div class="hello-block button">
+        <img src="Images/Commands/icon3.png" class="icon">
+        <span class="button-text"><b>/donate</b></span>
+        <span class="button-action">
+            <span class="button-action-text">Поддержать</span>
+            <i class="fa fa-chevron-right"></i>
+        </span>
+      </div>
+      <div class="hello-block button">
+        <img src="Images/Commands/icon4.png" class="icon">
+        <span class="button-text"><b>/support</b></span>
+        <span class="button-action">
+            <span class="button-action-text">Связаться</span>
+            <i class="fa fa-chevron-right"></i>
+        </span>
+      </div>
+      <div class="hello-block button">
+        <img src="Images/Commands/icon5.png" class="icon">
+        <span class="button-text"><b>/help</b></span>
+        <span class="button-action">
+            <span class="button-action-text">Помощь</span>
+            <i class="fa fa-chevron-right"></i>
+        </span>
+      </div>
+      <div class="hello-block button">
+        <img src="Images/Commands/icon6.png" class="icon">
+        <span class="button-text"><b>/about</b></span>
+        <span class="button-action">
+            <span class="button-action-text">О боте</span>
+            <i class="fa fa-chevron-right"></i>
+        </span>
+      </div>
     </div>
 
-    <div class="sigmabot"><span>2023 SIGMABOT. 18+</span></div>
+    <div class="hello-block text-before-block">
+      <span>В СТРОКЕ ВВОДА ВВЕДИТЕ СИМВОЛ &nbsp;<b>/</b> ,<br>А ЗАТЕМ ВЫБЕРИТЕ НУЖНУЮ КОМАНДУ</span>
+    </div>
+
+    <div class="hello-block commands-pic">
+        <img src="Images/Commands/command-light.png" class="light">
+        <img src="Images/Commands/command-dark.png" class="dark">
+    </div>
+
+    <div class="hello-block sigmabot">
+      <span>2023 SIGMABOT. 18+</span>
+    </div>
+
+  </div>
 
 
-
-
-  </header>
 </body>
 </html>
