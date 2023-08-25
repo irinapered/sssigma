@@ -4,7 +4,6 @@ tg.expand(); //расширяем на все окно
 
 tg.MainButton.show();
 tg.MainButton.setText("Закрыть навигацию");
-window.Telegram.
 
 
 
