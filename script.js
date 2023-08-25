@@ -39,7 +39,7 @@ function showPage(pageId) {
   for (var i = 0; i < pages.length; i++) {
     pages[i].style.transform = "translateX(-50%)";
   }
-  tg.HapticFeedback.impactOccurred('heavy')
+  tg.HapticFeedback.impactOccurred('light')
 
   // Отобразить выбранную страницу
   var pageToShow = document.getElementById(pageId);
