@@ -2,8 +2,8 @@ let tg = window.Telegram.WebApp; //получаем объект webapp теле
 
 tg.expand(); //расширяем на все окно
 
-tg.MainButton.show();
-tg.MainButton.setText("Закрыть навигацию");
+// tg.MainButton.show();
+// tg.MainButton.setText("Закрыть навигацию");
 
 function setWebsiteBackgroundColor(colorScheme, navigationBars) {
     const body = document.body;
@@ -48,7 +48,7 @@ function animateTransition() {
     const blocksToAnimate = document.querySelectorAll('#page1 .block');
     const helloBlocks = document.querySelectorAll('.hello-block');
     
-    let delay = 100;
+    let delay = 75;
     let blockCount = blocksToAnimate.length;
 
     // Начало анимации блоков на первой странице
