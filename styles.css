@@ -16,6 +16,7 @@ body {
 
 .page {
     width: 100vw;
+    margin-right: 0;
     position: absolute;
     overflow: hidden;
     transition: transform 0.5s;
@@ -24,7 +25,6 @@ body {
 }
 
 #main-page {
-    width: 100vw;
     transform: translateX(0);
     visibility: visible; /* Показываем элемент */
 }
