@@ -1,7 +1,8 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
 tg.expand(); //расширяем на все окно
-tg.MainButton.setText("Закрыть навигацию")
+tg.MainButton.text("Закрыть навигацию");
+tg.MainButton.setText("Закрыть навигацию");
 
 // tg.MainButton.show();
 // tg.MainButton.setText("Закрыть навигацию");
