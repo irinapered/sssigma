@@ -24,8 +24,11 @@ body {
 
 #main-page {
     transform: translateX(0);
+    transition: transform 1s;
     visibility: visible; /* Показываем элемент */
 }
+
+
 
 @media (prefers-color-scheme: light) {.page {background-color: #F2F1F6;}}
 @media (prefers-color-scheme: dark) {.page {background-color: black;}}
