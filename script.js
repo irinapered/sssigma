@@ -1,12 +1,10 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
 tg.expand(); //расширяем на все окно
-tg.MainButton.text("Закрыть навигацию");
-tg.MainButton.setText("Закрыть навигацию");
-tg.MainButton.show();
 
-// tg.MainButton.show();
-// tg.MainButton.setText("Закрыть навигацию");
+tg.MainButton.show();
+tg.MainButton.setText("Закрыть навигацию");
+window.Telegram.
 
 
 
@@ -42,6 +40,7 @@ function showPage(pageId) {
   for (var i = 0; i < pages.length; i++) {
     pages[i].style.transform = "translateX(-50%)";
   }
+  tg.HapticFeedback.impactOccurred('heavy')
 
   // Отобразить выбранную страницу
   var pageToShow = document.getElementById(pageId);
@@ -49,6 +48,7 @@ function showPage(pageId) {
     pageToShow.style.visibility = "visible";
     pageToShow.style.transform = "translateX(0)";
   }
+  
 }
   
 
