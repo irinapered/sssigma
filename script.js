@@ -2,8 +2,8 @@ let tg = window.Telegram.WebApp; //получаем объект webapp теле
 
 tg.expand(); //расширяем на все окно
 
-tg.MainButton.show();
 tg.MainButton.text = "ВЕРНУТЬСЯ В БОТА";
+tg.MainButton.show();
 // tg.MainButton.setText("Закрыть навигацию");
 
 
