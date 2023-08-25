@@ -3,7 +3,7 @@ let tg = window.Telegram.WebApp; //получаем объект webapp теле
 tg.expand(); //расширяем на все окно
 
 tg.MainButton.show();
-tg.MainButton.text = "Закрыть навигацию";
+tg.MainButton.text = "ВЕРНУТЬСЯ В БОТА";
 // tg.MainButton.setText("Закрыть навигацию");
 
 
@@ -48,6 +48,7 @@ function showPage(pageId) {
     pageToShow.style.visibility = "visible";
     pageToShow.style.transform = "translateX(0)";
   }
+  tg.MainButton.setText("‹ НАЗАД");
   
 }
   
