@@ -11,115 +11,146 @@ body {
 @media (prefers-color-scheme: light) {body {background-color: #F2F1F6;}}
 @media (prefers-color-scheme: dark) {body {background-color: black;}}
 
-.animatedPage {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
+
+
+.page {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+}
+
+#page1 {
+    display: block;
+}
+
+.block {
+    transform: translateX(0);
+    transition: transform 0.5s;
+}
+
+.hello-block {
+    opacity: 0;
     transform: translateX(100%);
-    transition: transform 0.5s ease-in-out;
-    border: none;
-  }
+    transition: opacity 0.1s, transform 0.5s;
+}
+
+.animate-left {
+    animation: slideLeft 0.5s ease-out forwards;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-106%);
+    }
+}
+
+.animate-in {
+    animation: appear 0.25s ease-in forwards;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .title-image {
     width: 100vw;
 }
 
 .icon {
-    width: calc(100vw / 1284 * 87);
-    margin-left: calc(100vw / 1284 * 60);
-    margin-right: calc(100vw / 1284 * 33);
-    margin-top: calc(100vw / 1284 * 28);
+    width: 7vw;
+    height: 7vw;
+    margin-left: 5vw;
+    margin-right: 3vw;
+    margin-top: 2.125vw;
+    margin-bottom: 2.125vw;
 }
 
-.block-1 {
-    background: linear-gradient(to left, #E7E6EC calc(90.654vw - (100vw / 1284 * 197)), white calc(90.654vw - (100vw / 1284 * 197)));
-    width: 90.654vw;
-    height: calc((90.654vw / 8 * 4) + (100vw / 1284 * 6));
-    border-radius: calc(100vw / 1284 * 40);
-    font-size: calc(100vw / 1284 * 50);
-    margin: auto;
+.block-with-multiple-buttons {
+    width: 90vw;
+    border-radius: 3.5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 8vw;
 
 }
-.block-2 {
-    background: linear-gradient(to left, #E7E6EC calc(90.654vw - (100vw / 1284 * 197)), white calc(90.654vw - (100vw / 1284 * 197)));
-    width: 90.654vw;
-    height: calc(90.654vw / 8 * 2);
-    border-radius: calc(100vw / 1284 * 40);
-    font-size: calc(100vw / 1284 * 50);
-    margin: auto;
-}
-.block-2 {
-    margin-top: calc(100vw / 1284 * 105);
-    margin-bottom: calc(100vw / 1284 * 105);
-}
-.block-3,
-.block-4 {
-    width: 90.654vw;
-    height: calc(90.654vw / 8);
-    border-radius: calc(100vw / 1284 * 40);
-    font-size: calc(100vw / 1284 * 50);
-    margin: auto;
-}
-
 @media (prefers-color-scheme: light) {
-    .block-1,
-    .block-2 {
-        background: linear-gradient(to left, #E7E6EC calc(90.654vw - (100vw / 1284 * 197)), white calc(90.654vw - (100vw / 1284 * 197)));
+    .block-with-multiple-buttons {
+        background: linear-gradient(to right, white 15vw, #E7E6EC 0);
     }
 }
 @media (prefers-color-scheme: dark) {
-    .block-1,
-    .block-2 {
-        background: linear-gradient(to left, #3E3D40 calc(90.654vw - (100vw / 1284 * 197)), #1C1B1E calc(90.654vw - (100vw / 1284 * 197)));
+    .block-with-multiple-buttons {
+        background: linear-gradient(to right, #1C1B1E 15vw, #3E3D40 0);
     }
 }
 
-
-
-
-
-/* БЛОКИ */
-
-.navigationBar {
-    height: calc(90.654vw / 8);
+.button {
+    height: calc(90vw / 8);
+    width: 90vw;
+    font-size: 4vw;
     position: relative;
+    margin: auto;
 }
 @media (prefers-color-scheme: light) {
-    .navigationBar {
+    .button {
         background-color: white;
         color: black;
     }
 }
 @media (prefers-color-scheme: dark) {
-    .navigationBar {
+    .button {
         background-color: #1C1B1E;
         color: white;
     }
 }
 
 /* Расстояние между блоками */
-.navigationBar:not(:first-child) {
+.button:not(:first-child) {
     margin-top: calc(100vw / 1284 * 3);
 }
 
 /* Цвет блока при наведении */
 @media (prefers-color-scheme: light) {
-    .navigationBar:hover {
+    .button:hover {
         background-color: #E7E6EC;
         cursor: pointer;
     }
 }
 @media (prefers-color-scheme: dark) {
-    .navigationBar:hover {
+    .button:hover {
         background-color: #2C2B2D;
         cursor: pointer;
     }
 }
 
 /* Расширение блоков при наведении в цвет полос между блоками */
-.navigationBar::before,
-.navigationBar::after {
+.button::before,
+.button::after {
     content: "";
     position: absolute;
     left: 0;
@@ -128,75 +159,75 @@ body {
     transform: scaleY(0);
 }
 @media (prefers-color-scheme: light) {
-    .navigationBar::before,
-    .navigationBar::after {
+    .button::before,
+    .button::after {
         background-color: #E7E6EC;
     }
 }
 @media (prefers-color-scheme: dark) {
-    .navigationBar::before,
-    .navigationBar::after {
+    .button::before,
+    .button::after {
         background-color: #2C2B2D;
     }
 }
-.navigationBar::before {
+.button::before {
     top: calc(100vw / 1284 * -3);
 }
-.navigationBar::after {
+.button::after {
     bottom: calc(100vw / 1284 * -3);
 }
-.navigationBar:not(:first-child):hover::before,
-.navigationBar:not(:last-child):hover::after {
+.button:not(:first-child):hover::before,
+.button:not(:last-child):hover::after {
     transform: scaleY(1); /* Само расширение при наведении */
 }
 
 
 
-.navigationBar:first-child {
-    border-top-left-radius: calc(100vw / 1284 * 40);
-    border-top-right-radius: calc(100vw / 1284 * 40);
+.button:first-child {
+    border-top-left-radius: 3.5vw;
+    border-top-right-radius: 3.5vw;
 }
-.navigationBar:last-child {
-    border-bottom-left-radius: calc(100vw / 1284 * 40);
-    border-bottom-right-radius: calc(100vw / 1284 * 40);
+.button:last-child {
+    border-bottom-left-radius: 3.5vw;
+    border-bottom-right-radius: 3.5vw;
 }
 
 
 
 
-.title {
+.button-text {
     position: absolute;
     top: 50%; /* Положение по вертикали в середине блока */
-    left: calc(100vw / 1284 * 197);
+    left: 15vw;
     transform: translateY(-50%); /* Сдвиг вверх на половину высоты текста */
 }
 
-.action {
+.button-action {
     position: absolute;
     top: 50%; /* Положение по вертикали в середине блока */
-    right: calc(100vw / 1284 * 63);
+    right: 3vw;
     transform: translateY(-50%); /* Сдвиг вверх на половину высоты текста */
 }
 
 @media (prefers-color-scheme: light) {
-    .action {
+    .button-action {
         color: #C5C4C7;
     }
 }
 @media (prefers-color-scheme: dark) {
-    .action {
+    .button-action {
         color: #59595E;
     }
 }
 
 @media (prefers-color-scheme: light) {
-    .action-text {
+    .button-action-text {
         color: #8A8A8D;
         margin-right: calc(100vw / 1284 * 10);
     }
 }
 @media (prefers-color-scheme: dark) {
-    .action-text {
+    .button-action-text {
         color: #97989E;
         margin-right: calc(100vw / 1284 * 10);
     }
@@ -204,36 +235,108 @@ body {
 
 
 
-.block-name {
+.text-before-block {
     font-size: calc(100vw / 1284 * 45);
-    margin-left: calc(100vw / 1284 * 120);
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: calc(100vw / 1284 * 100);
     margin-bottom: calc(100vw / 1284 * 25);
-    margin-right: calc(100vw / 1284 * 123);
 }
-.description-block {
+.text-after-block {
     font-size: calc(100vw / 1284 * 45);
-    margin-left: calc(100vw / 1284 * 120);
-    margin-bottom: calc(100vw / 1284 * 105);
+    margin-left: 10vw;
+    margin-right: 10vw;
     margin-top: calc(100vw / 1284 * 15);
-    margin-right: calc(100vw / 1284 * 123);
+    margin-bottom: calc(100vw / 1284 * 100);
 }
 .sigmabot {
     font-size: calc(100vw / 1284 * 45);
     text-align: center;
+    margin-top: calc(100vw / 1284 * 100);
     margin-bottom: calc(100vw / 1284 * 50);
 }
 @media (prefers-color-scheme: light) {
-    .block-name,
-    .description-block,
+    .text-before-block,
+    .text-after-block,
     .sigmabot {
         color: #85848B;
     }
 }
 @media (prefers-color-scheme: dark) {
-    .block-name,
-    .description-block,
+    .text-before-block,
+    .text-after-block,
     .sigmabot {
         color: #8C8D92;
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.commands-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: calc(100vw / 1284 * 900);
+    border-radius: calc(100vw / 1284 * 100);
+    margin: auto;
+    position: relative;
+}
+@media (prefers-color-scheme: light) {
+    .commands-pic {
+        background-color: #85848B;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .commands-pic {
+        background-color: #8C8D92;
+    }
+}
+
+
+.light,
+.dark {
+    position: absolute;
+    width: 97.5%;
+    border-radius: calc(100vw / 1284 * 90);
+
+}
+.dark {
+    z-index: 1;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+    .light {
+        opacity: 1;
+    }
+    .dark {
+        opacity: 0;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .light {
+        opacity: 0;
+    }
+    .dark {
+        opacity: 1;
+    }
+}
