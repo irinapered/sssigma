@@ -12,9 +12,6 @@ body {
 @media (prefers-color-scheme: dark) {body {background-color: black;}}
 
 
-
-
-
 .page {
     position: absolute;
     overflow: hidden;
