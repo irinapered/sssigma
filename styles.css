@@ -13,7 +13,8 @@ body {
 
 
 
-.page 
+
+.page {
     position: absolute;
     overflow: hidden;
     transition: transform 0.5s;
