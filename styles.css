@@ -14,9 +14,7 @@ body {
 
 
 
-.page {
-    width: 100vw;
-    margin-right: 0;
+.page 
     position: absolute;
     overflow: hidden;
     transition: transform 0.5s;
