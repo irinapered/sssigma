@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100vw;
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
     -webkit-user-select: none;
@@ -12,19 +13,24 @@ body {
 @media (prefers-color-scheme: dark) {body {background-color: black;}}
 
 
+
+
 .page {
     position: absolute;
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
     transform: translateX(100%);
-    visibility: hidden; /* Скрываем элемент, но оставляем его место на странице */
+    visibility: hidden;
 }
 
 #main-page {
     transform: translateX(0);
-    visibility: visible; /* Показываем элемент */
+    visibility: visible;
 }
 
+#commands-page {
+    height: 100vw;
+}
 
 
 @media (prefers-color-scheme: light) {.page {background-color: #F2F1F6;}}
@@ -211,6 +217,22 @@ body {
 }
 
 
+.submenu-title {
+    font-size: calc(100vw / 1284 * 50);
+    text-align: center;
+    margin-top: calc(100vw / 1284 * 50);
+    margin-bottom: calc(100vw / 1284 * 75);
+}
+@media (prefers-color-scheme: light) {
+    .submenu-title {
+        color: black;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .submenu-title {
+        color: white;
+    }
+}
 
 .text-before-block {
     font-size: calc(100vw / 1284 * 45);
