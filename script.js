@@ -59,13 +59,14 @@ function showPage(pageId) {
         mainPage.style.display = "none";
         mainPage.style.transform = "translateX(-100%)";
         };
-        tg.MainButton.setText("< НАЗАД");
   }, 500); // Задержка 500 миллисекунд
 
       // Прокрутить страницу вверх
   setTimeout(function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  tg.MainButton.setText("< НАЗАД");
   
 }
   
