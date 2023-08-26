@@ -19,9 +19,11 @@ body {
     transition: transform 0.5s;
     transform: translateX(100%);
     visibility: hidden;
+    width: 0;
 }
 
 #main-page {
+    width: 100vw;
     transform: translateX(0);
     visibility: visible;
 }
