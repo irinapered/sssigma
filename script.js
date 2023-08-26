@@ -1,9 +1,10 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
-tg.expand(); //расширяем на все окно
+tg.expand();
 
 tg.MainButton.text = "ВЕРНУТЬСЯ В БОТА";
 tg.MainButton.show();
+tg.onEvent('mainButtonClicked', tg.close())
 // tg.MainButton.setText("Закрыть навигацию");
 
 
@@ -35,20 +36,30 @@ tg.MainButton.show();
 
 
 function showPage(pageId) {
-  // Скрыть все страницы с помощью opacity и visibility
-  var pages = document.getElementsByClassName("page");
-  for (var i = 0; i < pages.length; i++) {
-    pages[i].style.transform = "translateX(-50%)";
-  }
-  tg.HapticFeedback.impactOccurred('light')
+  tg.HapticFeedback.impactOccurred('soft')
+  tg.expand();
+
+  // Смещает главную страницу влево
+  var mainPage = document.getElementById('main-page');
+  mainPage.style.transform = "translateX(-40%)";
 
   // Отобразить выбранную страницу
   var pageToShow = document.getElementById(pageId);
   if (pageToShow) {
     pageToShow.style.visibility = "visible";
     pageToShow.style.transform = "translateX(0)";
+    pageToShow.style.height = "auto";
   }
-  tg.MainButton.setText("‹ НАЗАД");
+
+  // Скрыть первую страницу через небольшую задержку
+  setTimeout(function() {
+    if (mainPage) {
+        mainPage.style.display = "none";
+        mainPage.style.transform = "translateX(-100%)";
+        }
+    }, 500); // Задержка 500 миллисекунд
+
+  tg.MainButton.setText("< НАЗАД");
   
 }
   
