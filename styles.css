@@ -18,17 +18,15 @@ body {
     position: absolute;
     overflow: hidden;
     transition: transform 0.5s;
-    visibility: hidden;
-}
-.page:not(:target) {
     transform: translateX(100%);
     visibility: hidden;
-  }
+}
 
 #main-page {
     margin-right: 0;
     transform: translateX(0);
     visibility: visible;
+    overflow: hidden;
 }
 
 #commands-page {
