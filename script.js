@@ -1,8 +1,9 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
-
+tg.expand();
 tg.MainButton.text = "ВЕРНУТЬСЯ В БОТА";
 tg.MainButton.show();
 tg.onEvent('mainButtonClicked', function(){
+    tg.HapticFeedback.impactOccurred('soft')
 	tg.close(); 
 });
 tg.expand();
