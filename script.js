@@ -50,6 +50,7 @@ function showPage(pageId) {
     pageToShow.style.visibility = "visible";
     pageToShow.style.transform = "translateX(0)";
     pageToShow.style.height = "auto";
+    pageToShow.style.width = "100vw";
   }
 
   // Скрыть первую страницу через небольшую задержку
