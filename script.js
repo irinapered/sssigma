@@ -2,7 +2,7 @@ let tg = window.Telegram.WebApp; //получаем объект webapp теле
 tg.expand();
 tg.MainButton.text = "ВЕРНУТЬСЯ В БОТА";
 tg.MainButton.show();
-tg.onEvent('mainButtonClicked', function(){
+tg.onEvent('mainButtonClicked', function() {
     tg.HapticFeedback.impactOccurred('soft')
 	tg.close(); 
 });
@@ -57,16 +57,14 @@ function showPage(pageId) {
     if (mainPage) {
         mainPage.style.display = "none";
         mainPage.style.transform = "translateX(-100%)";
-        }
-    }, 500); // Задержка 500 миллисекунд
+        };
+        tg.MainButton.setText("< НАЗАД");
+  }, 500); // Задержка 500 миллисекунд
 
       // Прокрутить страницу вверх
   setTimeout(function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-    
-
-  tg.MainButton.setText("< НАЗАД");
   
 }
   
