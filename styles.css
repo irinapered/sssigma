@@ -18,12 +18,15 @@ body {
     position: absolute;
     overflow: hidden;
     transition: transform 0.5s;
-    transform: translateX(100%);
     visibility: hidden;
 }
+.page:not(:target) {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
 
 #main-page {
-    overflow-x: hidden;
+    margin-right: 0;
     transform: translateX(0);
     visibility: visible;
 }
