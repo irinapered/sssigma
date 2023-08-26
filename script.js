@@ -1,14 +1,11 @@
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 
-tg.expand();
-
 tg.MainButton.text = "ВЕРНУТЬСЯ В БОТА";
 tg.MainButton.show();
 tg.onEvent('mainButtonClicked', function(){
 	tg.close(); 
-	//при клике на основную кнопку отправляем данные в строковом виде
 });
-// tg.MainButton.setText("Закрыть навигацию");
+tg.expand();
 
 
 
@@ -61,6 +58,12 @@ function showPage(pageId) {
         mainPage.style.transform = "translateX(-100%)";
         }
     }, 500); // Задержка 500 миллисекунд
+
+      // Прокрутить страницу вверх
+  setTimeout(function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+    
 
   tg.MainButton.setText("< НАЗАД");
   
