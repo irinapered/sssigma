@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
     -webkit-user-select: none;
@@ -12,6 +11,9 @@ body {
 @media (prefers-color-scheme: light) {body {background-color: #F2F1F6;}}
 @media (prefers-color-scheme: dark) {body {background-color: black;}}
 
+
+
+
 .page {
     position: absolute;
     overflow: hidden;
@@ -21,6 +23,7 @@ body {
 }
 
 #main-page {
+    overflow-x: hidden;
     transform: translateX(0);
     visibility: visible;
 }
