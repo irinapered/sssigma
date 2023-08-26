@@ -4,7 +4,10 @@ tg.expand();
 
 tg.MainButton.text = "ВЕРНУТЬСЯ В БОТА";
 tg.MainButton.show();
-tg.onEvent('mainButtonClicked', tg.close())
+tg.onEvent('mainButtonClicked', function(){
+	tg.close(); 
+	//при клике на основную кнопку отправляем данные в строковом виде
+});
 // tg.MainButton.setText("Закрыть навигацию");
 
 
